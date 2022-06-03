@@ -12,7 +12,10 @@ const responsiveAboutCont = {
 function About() {
   return (
     <Stack direction={"column"} sx={responsiveAboutCont}>
-      <Banner header='OUR STORY' bannerColor='#8f6818' />
+      <Banner
+        header='OUR STORY'
+        bannerColor={window.innerWidth > 600 ? "#8f6818" : "#910024"}
+      />
       <Stack
         sx={{
           paddingTop: "30px",

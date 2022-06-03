@@ -13,7 +13,6 @@ import {
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import { useNavigate } from "react-router-dom";
-import { AppContext } from "../AppContext";
 
 const responsiveDropdown = {
   position: "static",
@@ -23,8 +22,6 @@ const responsiveDropdown = {
   zIndex: 0,
 };
 function Dropdown() {
-  const { footer } = useContext(AppContext);
-  const [footerColor, setFooterColor] = footer;
   const [open, setOpen] = React.useState(false);
   const anchorRef = React.useRef(null);
   const navigate = useNavigate();
@@ -44,7 +41,6 @@ function Dropdown() {
 
     setOpen(false);
     navigate("/contact");
-    setFooterColor("#910024");
   };
 
   const handleCloseAbout = (event) => {
@@ -53,7 +49,6 @@ function Dropdown() {
 
     setOpen(false);
     navigate("/about");
-    setFooterColor("#8f6818");
   };
 
   function handleListKeyDown(event) {

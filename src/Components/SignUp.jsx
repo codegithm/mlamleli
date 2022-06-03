@@ -25,6 +25,7 @@ function SignUp() {
     height: "auto",
     paddingBottom: "2rem",
     backgroundImage: `url(${Back})`,
+    backgroundPosition: "center",
     flexDirection: { lg: "row", sm: "column", xs: "column", md: "row" },
     paddingTop: { lg: "2rem", sm: "40", md: "43px", xs: "40px" },
   };

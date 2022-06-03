@@ -12,6 +12,7 @@ import {
   ClickAwayListener,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
+import { useNavigate } from "react-router-dom";
 
 const responsiveDropdown = {
   position: "static",
@@ -23,17 +24,31 @@ const responsiveDropdown = {
 function Dropdown() {
   const [open, setOpen] = React.useState(false);
   const anchorRef = React.useRef(null);
-
+  const navigate = useNavigate();
   const handleToggle = () => {
     setOpen((prevOpen) => !prevOpen);
   };
 
   const handleClose = (event) => {
     if (anchorRef.current && anchorRef.current.contains(event.target)) {
-      return;
     }
 
     setOpen(false);
+  };
+  const handleCloseContact = (event) => {
+    if (anchorRef.current && anchorRef.current.contains(event.target)) {
+    }
+
+    setOpen(false);
+    navigate("/contact");
+  };
+
+  const handleCloseAbout = (event) => {
+    if (anchorRef.current && anchorRef.current.contains(event.target)) {
+    }
+
+    setOpen(false);
+    navigate("/about");
   };
 
   function handleListKeyDown(event) {
@@ -54,6 +69,7 @@ function Dropdown() {
 
     prevOpen.current = open;
   }, [open]);
+
   return (
     <AppBar sx={responsiveDropdown}>
       <Toolbar
@@ -105,9 +121,11 @@ function Dropdown() {
                       onKeyDown={handleListKeyDown}
                     >
                       <MenuItem onClick={handleClose}>OUR PLANS</MenuItem>
-                      <MenuItem onClick={handleClose}>OUR STORY</MenuItem>
+                      <MenuItem onClick={handleCloseAbout}>OUR STORY</MenuItem>
                       <MenuItem onClick={handleClose}>OUR SERVICES</MenuItem>
-                      <MenuItem onClick={handleClose}>CONTACT US</MenuItem>
+                      <MenuItem onClick={handleCloseContact}>
+                        CONTACT US
+                      </MenuItem>
                     </MenuList>
                   </ClickAwayListener>
                 </Paper>

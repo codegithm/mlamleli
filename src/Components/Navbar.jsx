@@ -2,8 +2,9 @@ import React from "react";
 import { AppBar, Box, Button } from "@mui/material";
 import Logo from "../assets/mlamleli.jpg";
 import NavLine from "./NavLine";
-
+import { useNavigate } from "react-router-dom";
 function Navbar() {
+  const navigate = useNavigate();
   const responsiveNavCont = {
     backgroundColor: "#fff",
     display: "flex",
@@ -47,6 +48,9 @@ function Navbar() {
               backgroundColor: "#8f6818",
               borderRadius: 0,
               width: 163.13,
+            }}
+            onClick={() => {
+              navigate("/signin");
             }}
           >
             Member Login

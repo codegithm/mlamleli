@@ -6,7 +6,7 @@ function Footer() {
     display: { lg: "flex", md: "flex", sm: "none", xs: "none" },
   };
   const footerTitle = {
-    fontSize: { lg: "40px", md: "28px", sm: "19px", xs: "17px" },
+    fontSize: { lg: "28px", md: "28px", sm: "19px", xs: "17px" },
   };
   return (
     <Box

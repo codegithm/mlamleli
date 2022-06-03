@@ -1,12 +1,5 @@
 import React from "react";
-import {
-  Box,
-  Stack,
-  Typography,
-  ListItemText,
-  List,
-  ListItem,
-} from "@mui/material";
+import { Stack, Typography } from "@mui/material";
 import Banner from "./Banner";
 
 const responsiveAboutCont = {

@@ -185,7 +185,7 @@ function Contact() {
               color: "#910024",
             }}
           >
-            MLAMLELI BRANCH OFFICE CONTCT DETAILS
+            Mlamleli branch office contact details
           </Typography>
           <Stack
             direction={"row"}

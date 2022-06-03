@@ -90,7 +90,7 @@ function SignUp() {
       </Box>
       <Paper flex={1} elevation={4} sx={responsivePaper}>
         <Typography variant='h6' component='h1' textAlign={"center"}>
-          To Sign you up will need a few details from you
+          To Sign you up we will need a few details from you
         </Typography>
         <TextField
           id='name'

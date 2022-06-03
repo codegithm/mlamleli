@@ -2,8 +2,11 @@ import React from "react";
 import {
   Box,
   Stack,
+  Paper,
+  Button,
   Typography,
   ListItemText,
+  TextField,
   List,
   ListItem,
 } from "@mui/material";
@@ -15,6 +18,26 @@ const responsiveContactCont = {
   height: "auto",
   paddingBottom: "2rem",
   paddingTop: { lg: "2rem", sm: "0", md: "0px", xs: "0px" },
+};
+const responsivePaper = {
+  minWidth: 245,
+  width: "auto",
+
+  height: "auto",
+  maxWidth: "329.83px",
+  maxHeight: 480,
+  borderRadius: 7,
+  display: "flex",
+  flexDirection: "column",
+  padding: "2rem 2rem",
+  marginTop: "2rem",
+  marginRight: "10px",
+  marginLeft: { lg: "20px", sm: "10px", md: "10px", xs: "10px" },
+};
+const message = {
+  marginLeft: { lg: "0px", sm: "10px", md: "0px", xs: "10px" },
+  justifyContent: "center",
+  alignItems: "center",
 };
 function Contact() {
   return (
@@ -258,6 +281,50 @@ function Contact() {
           </Stack>
         </Box>
       </Box>
+      <Stack direction={"column"} sx={message}>
+        <Typography
+          variant='h6'
+          component='h1'
+          textAlign={"center"}
+          sx={{
+            color: "#910024",
+          }}
+        >
+          Send us a massage
+        </Typography>
+        <Paper elevation={4} sx={responsivePaper}>
+          <TextField
+            id='email'
+            placeholder='Email'
+            multiline
+            sx={{
+              marginTop: "17px",
+            }}
+            color='primary'
+          />
+          <TextField
+            id='message'
+            multiline
+            rows={4}
+            placeholder='Your Message'
+            sx={{
+              marginTop: "17px",
+            }}
+            color='primary'
+          />
+
+          <Button
+            variant='contained'
+            href='#'
+            sx={{
+              marginTop: "17px",
+              backgroundColor: "primary",
+            }}
+          >
+            SEND
+          </Button>
+        </Paper>
+      </Stack>
     </Stack>
   );
 }

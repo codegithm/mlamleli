@@ -32,12 +32,12 @@ const responsivePaper = {
   padding: "2rem 2rem",
   marginTop: "2rem",
   marginRight: "10px",
-  marginLeft: { lg: "20px", sm: "10px", md: "10px", xs: "10px" },
 };
 const message = {
   marginLeft: { lg: "0px", sm: "10px", md: "0px", xs: "10px" },
   justifyContent: "center",
   alignItems: "center",
+  marginTop: "40px",
 };
 function Contact() {
   return (

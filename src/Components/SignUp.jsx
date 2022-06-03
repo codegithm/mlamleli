@@ -42,7 +42,7 @@ function SignUp() {
     flexDirection: "column",
     padding: "2rem 2rem",
     marginTop: "2rem",
-    marginRight: { lg: "2rem", sm: "10px", md: "10px", xs: "10px" },
+    marginRight: { lg: "80px", sm: "10px", md: "10px", xs: "10px" },
     marginLeft: { sm: "10px", md: "10px", xs: "10px" },
   };
 

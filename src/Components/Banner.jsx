@@ -1,7 +1,7 @@
 import React from "react";
 import Back from "../assets/back.png";
 import { Box, Typography } from "@mui/material";
-function Banner({ header }) {
+function Banner({ header, bannerColor }) {
   return (
     <Box
       sx={{
@@ -18,7 +18,7 @@ function Banner({ header }) {
           width: "60%",
           fontSize: "2rem",
           color: "#fff",
-          backgroundColor: "#8f6818",
+          backgroundColor: `${bannerColor}`,
           padding: "1rem 1rem 1rem 1rem",
           paddingLeft: "3rem",
         }}

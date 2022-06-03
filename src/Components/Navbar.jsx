@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 import { AppBar, Box, Button } from "@mui/material";
 import Logo from "../assets/mlamleli.jpg";
 import NavLine from "./NavLine";
 import { useNavigate } from "react-router-dom";
+import { AppContext } from "../AppContext";
 function Navbar() {
+  const { footer } = useContext(AppContext);
+  const [footerColor, setFooterColor] = footer;
   const navigate = useNavigate();
   const responsiveNavCont = {
     backgroundColor: "#fff",
@@ -51,6 +54,7 @@ function Navbar() {
             }}
             onClick={() => {
               navigate("/signin");
+              setFooterColor("#910024");
             }}
           >
             Member Login

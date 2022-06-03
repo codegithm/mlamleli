@@ -29,7 +29,7 @@ const responsivePaper = {
 function SignIn() {
   return (
     <Stack direction={"column"} sx={responsiveSignInCont}>
-      <Banner header='MEMBER LOGIN' />
+      <Banner header='MEMBER LOGIN' bannerColor='#910024' />
       <Paper elevation={4} sx={responsivePaper}>
         <Typography
           variant='h6'

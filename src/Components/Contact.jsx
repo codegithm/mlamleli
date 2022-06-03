@@ -19,7 +19,7 @@ const responsiveContactCont = {
 function Contact() {
   return (
     <Stack direction={"column"} sx={responsiveContactCont}>
-      <Banner header='CONTACT US' />
+      <Banner header='CONTACT US' bannerColor='#910024' />
       <Box
         sx={{
           paddingTop: "30px",
@@ -32,6 +32,7 @@ function Contact() {
             fontSize: "17px",
             fontWeight: 500,
             textAlign: "center",
+            color: "#910024",
           }}
         >
           We are located in the Eastern Cape and Free State Provinces in South
@@ -149,6 +150,7 @@ function Contact() {
               fontSize: "17px",
               fontWeight: 500,
               textAlign: "center",
+              color: "#910024",
             }}
           >
             MLAMLELI BRANCH OFFICE CONTCT DETAILS

@@ -1,13 +1,19 @@
 import { Box, Stack, Typography } from "@mui/material";
-import React from "react";
+import React, { useContext } from "react";
+import { useNavigate } from "react-router-dom";
+import { AppContext } from "../AppContext";
 
 function Footer() {
+  const { footer } = useContext(AppContext);
+  const [footerColor, setFooterColor] = footer;
   const responsiveFooter = {
     display: { lg: "flex", md: "flex", sm: "none", xs: "none" },
   };
   const footerTitle = {
-    fontSize: { lg: "28px", md: "28px", sm: "19px", xs: "17px" },
+    fontSize: { lg: "18px", md: "18px", sm: "15px", xs: "15px" },
   };
+
+  let navigate = useNavigate();
   return (
     <Box
       sx={{
@@ -27,6 +33,7 @@ function Footer() {
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
+            cursor: "pointer",
           }}
         >
           <Typography
@@ -46,6 +53,11 @@ function Footer() {
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
+            cursor: "pointer",
+          }}
+          onClick={() => {
+            navigate("/about");
+            setFooterColor("#8f6818");
           }}
         >
           <Typography
@@ -54,7 +66,7 @@ function Footer() {
               fontSize: "17px",
             }}
           >
-            OUR SERVICES
+            OUR STORY
           </Typography>
         </Box>
         <Box
@@ -65,6 +77,7 @@ function Footer() {
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
+            cursor: "pointer",
           }}
         >
           <Typography
@@ -84,6 +97,11 @@ function Footer() {
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
+            cursor: "pointer",
+          }}
+          onClick={() => {
+            navigate("/contact");
+            setFooterColor("#910024");
           }}
         >
           <Typography
@@ -98,7 +116,7 @@ function Footer() {
       </Stack>
       <Box
         sx={{
-          backgroundColor: "#910024",
+          backgroundColor: `${footerColor}`,
           padding: "4em 0em 2em 0rem",
           textAlign: "center",
         }}

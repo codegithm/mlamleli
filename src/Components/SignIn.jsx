@@ -1,5 +1,12 @@
 import React from "react";
-import { Stack, Typography, TextField, Paper, Button } from "@mui/material";
+import {
+  Stack,
+  Typography,
+  TextField,
+  Paper,
+  Button,
+  Box,
+} from "@mui/material";
 import Banner from "./Banner";
 
 const responsiveSignInCont = {
@@ -30,47 +37,55 @@ function SignIn() {
   return (
     <Stack direction={"column"} sx={responsiveSignInCont}>
       <Banner header='MEMBER LOGIN' bannerColor='#910024' />
-      <Paper elevation={4} sx={responsivePaper}>
-        <Typography
-          variant='h6'
-          component='h1'
-          textAlign={"center"}
-          sx={{
-            color: "#910024",
-          }}
-        >
-          Only Mlameli Registered members have access to this portal
-        </Typography>
-        <TextField
-          id='username'
-          label='Userame'
-          variant='standard'
-          sx={{
-            marginTop: "17px",
-          }}
-          color='primary'
-        />
-        <TextField
-          id='password'
-          label='Password'
-          variant='standard'
-          sx={{
-            marginTop: "17px",
-          }}
-          color='primary'
-        />
+      <Box
+        sx={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
+        <Paper elevation={4} sx={responsivePaper}>
+          <Typography
+            variant='h6'
+            component='h1'
+            textAlign={"center"}
+            sx={{
+              color: "#910024",
+            }}
+          >
+            Only Mlameli Registered members have access to this portal
+          </Typography>
+          <TextField
+            id='username'
+            label='Userame'
+            variant='standard'
+            sx={{
+              marginTop: "17px",
+            }}
+            color='primary'
+          />
+          <TextField
+            id='password'
+            label='Password'
+            variant='standard'
+            sx={{
+              marginTop: "17px",
+            }}
+            color='primary'
+          />
 
-        <Button
-          variant='contained'
-          href='#'
-          sx={{
-            marginTop: "17px",
-            backgroundColor: "primary",
-          }}
-        >
-          SIGN IN
-        </Button>
-      </Paper>
+          <Button
+            variant='contained'
+            href='#'
+            sx={{
+              marginTop: "17px",
+              backgroundColor: "primary",
+            }}
+          >
+            SIGN IN
+          </Button>
+        </Paper>
+      </Box>
     </Stack>
   );
 }

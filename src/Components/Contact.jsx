@@ -39,132 +39,141 @@ const message = {
   alignItems: "center",
   marginTop: "40px",
 };
+const details = {
+  paddingTop: "30px",
+  display: "flex",
+  flexDirection: { lg: "row", sm: "column", md: "column", xs: "column" },
+  justifyContent: {
+    lg: "space-around",
+    sm: "center",
+    md: "space-around",
+    xs: "center",
+  },
+};
 function Contact() {
   return (
     <Stack direction={"column"} sx={responsiveContactCont}>
       <Banner header='CONTACT US' bannerColor='#910024' />
-      <Box
-        sx={{
-          paddingTop: "30px",
-        }}
-      >
-        <Typography
-          variant='h4'
-          component='h1'
-          sx={{
-            fontSize: "17px",
-            fontWeight: 500,
-            textAlign: "center",
-            color: "#910024",
-          }}
-        >
-          We are located in the Eastern Cape and Free State Provinces in South
-          Africa
-        </Typography>
-        <Stack
-          direction={"row"}
-          sx={{
-            paddingTop: "20px",
-            justifyContent: "center",
-          }}
-        >
-          <Box
+      <Box sx={details}>
+        <Box>
+          <Typography
+            variant='h4'
+            component='h1'
             sx={{
-              paddingLeft: "20px",
-              paddingRight: "20px",
+              fontSize: "17px",
+              fontWeight: 500,
+              textAlign: "center",
+              color: "#910024",
             }}
           >
-            <Typography
-              variant='h5'
-              component='h2'
+            We are located in the Eastern Cape and Free State Provinces in South
+            Africa
+          </Typography>
+          <Stack
+            direction={"row"}
+            sx={{
+              paddingTop: "20px",
+              justifyContent: "center",
+            }}
+          >
+            <Box
               sx={{
-                fontSize: "14px",
-                fontWeight: 500,
+                paddingLeft: "20px",
+                paddingRight: "20px",
               }}
             >
-              Eastern Cape Branches
-            </Typography>
-            <List dense={false}>
-              <ListItem
+              <Typography
+                variant='h5'
+                component='h2'
                 sx={{
-                  paddingTop: "0px",
-                  paddingBottom: "0px",
-                  fontSize: "7px",
+                  fontSize: "14px",
+                  fontWeight: 500,
                 }}
               >
-                <ListItemText primary='Sterkspruit' />
-              </ListItem>
-              <ListItem
+                Eastern Cape Branches
+              </Typography>
+              <List dense={false}>
+                <ListItem
+                  sx={{
+                    paddingTop: "0px",
+                    paddingBottom: "0px",
+                    fontSize: "7px",
+                  }}
+                >
+                  <ListItemText primary='Sterkspruit' />
+                </ListItem>
+                <ListItem
+                  sx={{
+                    paddingTop: "0px",
+                    paddingBottom: "0px",
+                    fontSize: "10px",
+                  }}
+                >
+                  <ListItemText primary='Barkly East' />
+                </ListItem>
+                <ListItem
+                  sx={{
+                    paddingTop: "0px",
+                    paddingBottom: "0px",
+                    fontSize: "10px",
+                  }}
+                >
+                  <ListItemText primary='Burgersdorp' />
+                </ListItem>
+                <ListItem
+                  sx={{
+                    paddingTop: "0px",
+                    paddingBottom: "0px",
+                    fontSize: "10px",
+                  }}
+                >
+                  <ListItemText primary='Venterstad' />
+                </ListItem>
+              </List>
+            </Box>
+            <Box>
+              <Typography
+                variant='h5'
+                component='h2'
                 sx={{
-                  paddingTop: "0px",
-                  paddingBottom: "0px",
-                  fontSize: "10px",
+                  fontSize: "14px",
+                  fontWeight: 500,
                 }}
               >
-                <ListItemText primary='Barkly East' />
-              </ListItem>
-              <ListItem
-                sx={{
-                  paddingTop: "0px",
-                  paddingBottom: "0px",
-                  fontSize: "10px",
-                }}
-              >
-                <ListItemText primary='Burgersdorp' />
-              </ListItem>
-              <ListItem
-                sx={{
-                  paddingTop: "0px",
-                  paddingBottom: "0px",
-                  fontSize: "10px",
-                }}
-              >
-                <ListItemText primary='Venterstad' />
-              </ListItem>
-            </List>
-          </Box>
-          <Box>
-            <Typography
-              variant='h5'
-              component='h2'
-              sx={{
-                fontSize: "14px",
-                fontWeight: 500,
-              }}
-            >
-              Free State Branches
-            </Typography>
-            <List dense={false}>
-              <ListItem
-                sx={{
-                  paddingTop: "0px",
-                  paddingBottom: "0px",
-                  fontSize: "7px",
-                }}
-              >
-                <ListItemText primary='Bethulie' />
-              </ListItem>
-              <ListItem
-                sx={{
-                  paddingTop: "0px",
-                  paddingBottom: "0px",
-                  fontSize: "10px",
-                }}
-              >
-                <ListItemText primary='Springfontein' />
-              </ListItem>
-              <ListItem
-                sx={{
-                  paddingTop: "0px",
-                  paddingBottom: "0px",
-                  fontSize: "10px",
-                }}
-              >
-                <ListItemText primary='Rouxville' />
-              </ListItem>
-            </List>
-          </Box>
-        </Stack>
+                Free State Branches
+              </Typography>
+              <List dense={false}>
+                <ListItem
+                  sx={{
+                    paddingTop: "0px",
+                    paddingBottom: "0px",
+                    fontSize: "7px",
+                  }}
+                >
+                  <ListItemText primary='Bethulie' />
+                </ListItem>
+                <ListItem
+                  sx={{
+                    paddingTop: "0px",
+                    paddingBottom: "0px",
+                    fontSize: "10px",
+                  }}
+                >
+                  <ListItemText primary='Springfontein' />
+                </ListItem>
+                <ListItem
+                  sx={{
+                    paddingTop: "0px",
+                    paddingBottom: "0px",
+                    fontSize: "10px",
+                  }}
+                >
+                  <ListItemText primary='Rouxville' />
+                </ListItem>
+              </List>
+            </Box>
+          </Stack>
+        </Box>
         <Box>
           <Typography
             variant='h4'

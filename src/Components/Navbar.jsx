@@ -44,6 +44,10 @@ function Navbar() {
               width: 232,
               height: 100,
             }}
+            onClick={() => {
+              navigate("/");
+              setFooterColor("#910024");
+            }}
           />
           <Button
             variant='contained'

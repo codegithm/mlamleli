@@ -41,6 +41,10 @@ function Footer() {
             alignItems: "center",
             cursor: "pointer",
           }}
+          onClick={() => {
+            navigate("/plans");
+            setFooterColor("#f2d02f");
+          }}
         >
           <Typography
             variant='h5'
@@ -84,6 +88,10 @@ function Footer() {
             justifyContent: "center",
             alignItems: "center",
             cursor: "pointer",
+          }}
+          onClick={() => {
+            navigate("/services");
+            setFooterColor("#10100a");
           }}
         >
           <Typography

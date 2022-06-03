@@ -13,6 +13,7 @@ const responsiveSignInCont = {
   marginTop: { lg: "104px", sm: "0px", xs: "0px", md: "104px" },
   display: "flex",
   height: "auto",
+  minHeight: "100vh",
   paddingBottom: "2rem",
   paddingTop: { lg: "2rem", sm: "0", md: "0px", xs: "0px" },
 };
@@ -20,7 +21,6 @@ const responsiveSignInCont = {
 const responsivePaper = {
   minWidth: 245,
   width: "auto",
-
   height: "auto",
   maxWidth: "329.83px",
   maxHeight: 480,

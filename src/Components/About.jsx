@@ -5,16 +5,22 @@ import Banner from "./Banner";
 const responsiveAboutCont = {
   marginTop: { lg: "104px", sm: "0px", xs: "0px", md: "104px" },
   display: "flex",
+  minHeight: "100vh",
   height: "auto",
   paddingBottom: "2rem",
   paddingTop: { lg: "2rem", sm: "0", md: "0px", xs: "0px" },
 };
 function About() {
+  let width = window.innerWidth;
   return (
     <Stack direction={"column"} sx={responsiveAboutCont}>
       <Banner
         header='OUR STORY'
-        bannerColor={window.innerWidth > 600 ? "#8f6818" : "#910024"}
+        bannerColor={
+          window.matchMedia("(orientation: potrait)").matches || width >= 900
+            ? "#8f6818"
+            : "#910024"
+        }
       />
       <Stack
         sx={{

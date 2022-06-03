@@ -50,7 +50,20 @@ function Dropdown() {
     setOpen(false);
     navigate("/about");
   };
+  const handleClosePlans = (event) => {
+    if (anchorRef.current && anchorRef.current.contains(event.target)) {
+    }
 
+    setOpen(false);
+    navigate("/plans");
+  };
+  const handleCloseServices = (event) => {
+    if (anchorRef.current && anchorRef.current.contains(event.target)) {
+    }
+
+    setOpen(false);
+    navigate("/services");
+  };
   function handleListKeyDown(event) {
     if (event.key === "Tab") {
       event.preventDefault();
@@ -120,9 +133,11 @@ function Dropdown() {
                       aria-labelledby='composition-button'
                       onKeyDown={handleListKeyDown}
                     >
-                      <MenuItem onClick={handleClose}>OUR PLANS</MenuItem>
+                      <MenuItem onClick={handleClosePlans}>OUR PLANS</MenuItem>
                       <MenuItem onClick={handleCloseAbout}>OUR STORY</MenuItem>
-                      <MenuItem onClick={handleClose}>OUR SERVICES</MenuItem>
+                      <MenuItem onClick={handleCloseServices}>
+                        OUR SERVICES
+                      </MenuItem>
                       <MenuItem onClick={handleCloseContact}>
                         CONTACT US
                       </MenuItem>

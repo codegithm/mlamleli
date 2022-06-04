@@ -14,17 +14,13 @@ function Footer() {
   };
 
   let navigate = useNavigate();
-  let width = window.innerWidth;
+
   return (
     <Box
       sx={{
         display: "flex",
         flexDirection: "column",
-        position: `${
-          window.matchMedia("(orientation: landscape)").matches || width < 746
-            ? "relative"
-            : "absolute"
-        }`,
+        position: "relative",
         bottom: 0,
         color: "#fff",
         width: "100vw",

@@ -1,11 +1,15 @@
 import React from "react";
 import { Stack, Typography } from "@mui/material";
 import Banner from "./Banner";
-
+const heighDesk = 304;
+const heightMobi = 310;
+const widthBox = window.innerWidth;
 const responsiveAboutCont = {
   marginTop: { lg: "104px", sm: "0px", xs: "0px", md: "104px" },
   display: "flex",
-  minHeight: "100vh",
+  minHeight: `${
+    widthBox > 900 ? "calc(100vh - 304px)" : "calc(100vh - 310px)"
+  }`,
   height: "auto",
   paddingBottom: "2rem",
   paddingTop: { lg: "2rem", sm: "0", md: "0px", xs: "0px" },

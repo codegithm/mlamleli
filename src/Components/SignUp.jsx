@@ -19,13 +19,19 @@ function SignUp() {
   const handleChange = (event) => {
     setPlan(event.target.value);
   };
+  const widthBox = window.innerWidth;
   const responsiveSignup = {
     marginTop: { lg: "104px", sm: "0px", xs: "0px", md: "104px" },
     display: "flex",
     height: "auto",
+    minHeight: `${
+      widthBox > 900 ? "calc(100vh - 304px)" : "calc(100vh - 310px)"
+    }`,
     paddingBottom: "2rem",
     backgroundImage: `url(${Back})`,
     backgroundPosition: "center",
+    backgroundRepeat: "no-repeat",
+    backgroundSize: "cover",
     flexDirection: { lg: "row", sm: "column", xs: "column", md: "row" },
     paddingTop: { lg: "2rem", sm: "40", md: "43px", xs: "40px" },
   };
@@ -88,83 +94,92 @@ function SignUp() {
           </Typography>
         </Box>
       </Box>
-      <Paper flex={1} elevation={4} sx={responsivePaper}>
-        <Typography variant='h6' component='h1' textAlign={"center"}>
-          To Sign you up we will need a few details from you
-        </Typography>
-        <TextField
-          id='name'
-          label='Name'
-          variant='standard'
-          sx={{
-            marginTop: "17px",
-          }}
-          color='primary'
-        />
-        <TextField
-          id='email'
-          label='Email'
-          variant='standard'
-          sx={{
-            marginTop: "17px",
-          }}
-          color='primary'
-        />
-
-        <TextField
-          id='number'
-          label='Number'
-          variant='standard'
-          type='number'
-          InputLabelProps={{
-            shrink: true,
-          }}
-          sx={{
-            marginTop: "17px",
-          }}
-          color='primary'
-        />
-        <FormControl variant='standard' sx={{ marginTop: "17px" }}>
-          <InputLabel id='demo-simple-select-standard-label'>
-            Select a plan
-          </InputLabel>
-          <Select
-            labelId='demo-simple-select-standard-label'
-            id='demo-simple-select-standard'
-            value={plan}
-            onChange={handleChange}
-            label='Select a plan'
+      <Box
+        flex={1}
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+        }}
+      >
+        <Paper elevation={4} sx={responsivePaper}>
+          <Typography variant='h6' component='h1' textAlign={"center"}>
+            To Sign you up we will need a few details from you
+          </Typography>
+          <TextField
+            id='name'
+            label='Name'
+            variant='standard'
+            sx={{
+              marginTop: "17px",
+            }}
             color='primary'
-          >
-            <MenuItem value={"1+5 Casket Funeral Plan"}>
-              1+5 Casket Funeral Plan
-            </MenuItem>
-            <MenuItem value={"1+9 Casket Funeral Plan"}>
-              1+9 Casket Funeral Plan
-            </MenuItem>
-            <MenuItem value={"Plan A 3 Tier Coffin Funeral Plan"}>
-              Plan A 3 Tier Coffin Funeral Plan
-            </MenuItem>
-            <MenuItem value={"Plan B Family Casket Funeral Plan"}>
-              Plan B Family Casket Funeral Plan
-            </MenuItem>
-            <MenuItem value={"Plan C Family Casket Funeral Plan"}>
-              Plan C Family Casket Funeral Plan
-            </MenuItem>
-          </Select>
-        </FormControl>
+          />
+          <TextField
+            id='email'
+            label='Email'
+            variant='standard'
+            sx={{
+              marginTop: "17px",
+            }}
+            color='primary'
+          />
 
-        <Button
-          variant='contained'
-          href='#'
-          sx={{
-            marginTop: "17px",
-            backgroundColor: "primary",
-          }}
-        >
-          SIGN UP
-        </Button>
-      </Paper>
+          <TextField
+            id='number'
+            label='Number'
+            variant='standard'
+            type='number'
+            InputLabelProps={{
+              shrink: true,
+            }}
+            sx={{
+              marginTop: "17px",
+            }}
+            color='primary'
+          />
+          <FormControl variant='standard' sx={{ marginTop: "17px" }}>
+            <InputLabel id='demo-simple-select-standard-label'>
+              Select a plan
+            </InputLabel>
+            <Select
+              labelId='demo-simple-select-standard-label'
+              id='demo-simple-select-standard'
+              value={plan}
+              onChange={handleChange}
+              label='Select a plan'
+              color='primary'
+            >
+              <MenuItem value={"1+5 Casket Funeral Plan"}>
+                1+5 Casket Funeral Plan
+              </MenuItem>
+              <MenuItem value={"1+9 Casket Funeral Plan"}>
+                1+9 Casket Funeral Plan
+              </MenuItem>
+              <MenuItem value={"Plan A 3 Tier Coffin Funeral Plan"}>
+                Plan A 3 Tier Coffin Funeral Plan
+              </MenuItem>
+              <MenuItem value={"Plan B Family Casket Funeral Plan"}>
+                Plan B Family Casket Funeral Plan
+              </MenuItem>
+              <MenuItem value={"Plan C Family Casket Funeral Plan"}>
+                Plan C Family Casket Funeral Plan
+              </MenuItem>
+            </Select>
+          </FormControl>
+
+          <Button
+            variant='contained'
+            href='#'
+            sx={{
+              marginTop: "17px",
+              backgroundColor: "primary",
+            }}
+          >
+            SIGN UP
+          </Button>
+        </Paper>
+      </Box>
     </Box>
   );
 }

@@ -1,8 +1,7 @@
 import React from "react";
 import { Stack, Typography } from "@mui/material";
 import Banner from "./Banner";
-const heighDesk = 304;
-const heightMobi = 310;
+
 const widthBox = window.innerWidth;
 const responsiveAboutCont = {
   marginTop: { lg: "104px", sm: "0px", xs: "0px", md: "104px" },

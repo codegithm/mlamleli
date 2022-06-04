@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { AppBar, Box, Button } from "@mui/material";
 import Logo from "../assets/mlamleli.jpg";
 import NavLine from "./NavLine";
@@ -7,6 +7,9 @@ import { AppContext } from "../AppContext";
 function Navbar() {
   const { footer } = useContext(AppContext);
   const [footerColor, setFooterColor] = footer;
+  const [orientationChange, setOrientationChange] = useState(
+    window.innerHeight > 400
+  );
   const navigate = useNavigate();
   const responsiveNavCont = {
     backgroundColor: "#fff",
@@ -17,9 +20,13 @@ function Navbar() {
     paddingRight: { lg: "2rem", md: "2rem", sm: "0px", sx: "0px" },
     justifyContent: "space-between",
   };
+
+  window.addEventListener("orientationchange", () => {
+    setOrientationChange(!orientationChange);
+  });
   return (
     <Box
-      position='fixed'
+      position={orientationChange ? "fixed" : "absolute"}
       sx={{
         display: "flex",
         flexDirection: "column",

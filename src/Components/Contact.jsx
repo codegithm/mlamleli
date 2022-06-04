@@ -12,11 +12,14 @@ import {
 } from "@mui/material";
 import Banner from "./Banner";
 
+const widthBox = window.innerWidth;
 const responsiveContactCont = {
   marginTop: { lg: "104px", sm: "0px", xs: "0px", md: "104px" },
   display: "flex",
   height: "auto",
-  minHeight: "100vh",
+  minHeight: `${
+    widthBox > 900 ? "calc(100vh - 304px)" : "calc(100vh - 310px)"
+  }`,
   paddingBottom: "2rem",
   paddingTop: { lg: "2rem", sm: "0", md: "0px", xs: "0px" },
 };

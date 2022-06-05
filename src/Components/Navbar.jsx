@@ -20,7 +20,15 @@ function Navbar() {
     paddingRight: { lg: "2rem", md: "2rem", sm: "0px", sx: "0px" },
     justifyContent: "space-between",
   };
-
+  const responsiveLogo = {
+    width: { lg: 232, md: 232, sm: "150px", xs: "150px" },
+    height: { lg: 100, md: 100, sm: "auto", xs: "auto" },
+  };
+  const appBar = {
+    backgroundColor: "#fff",
+    minHeigh: { lg: 104, md: 104, sm: "80px", xs: "80px" },
+    height: { lg: 104, md: 104, sm: "80px", xs: "80px" },
+  };
   window.addEventListener("orientationchange", () => {
     setOrientationChange(!orientationChange);
   });
@@ -34,23 +42,13 @@ function Navbar() {
         zIndex: 100,
       }}
     >
-      <AppBar
-        position='stikcy'
-        sx={{
-          backgroundColor: "#fff",
-          minHeigh: 104,
-          height: 104,
-        }}
-      >
+      <AppBar position='stikcy' sx={appBar}>
         <Box sx={responsiveNavCont}>
           <Box
             component='img'
             alt='Logo'
             src={Logo}
-            sx={{
-              width: 232,
-              height: 100,
-            }}
+            sx={responsiveLogo}
             onClick={() => {
               navigate("/");
               setFooterColor("#910024");

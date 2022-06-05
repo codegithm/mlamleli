@@ -25,7 +25,7 @@ function SignUp() {
     display: "flex",
     height: "auto",
     minHeight: `${
-      widthBox > 900 ? "calc(100vh - 304px)" : "calc(100vh - 310px)"
+      widthBox > 900 ? "calc(100vh - 304px)" : "calc(100vh - 330px)"
     }`,
     paddingBottom: "2rem",
     backgroundImage: `url(${Back})`,

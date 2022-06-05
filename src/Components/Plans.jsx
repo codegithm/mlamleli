@@ -7,7 +7,7 @@ const responsivePlansCont = {
   marginTop: { lg: "104px", sm: "0px", xs: "0px", md: "104px" },
   display: "flex",
   minHeight: `${
-    widthBox > 900 ? "calc(100vh - 304px)" : "calc(100vh - 310px)"
+    widthBox > 900 ? "calc(100vh - 304px)" : "calc(100vh - 330px)"
   }`,
   height: "auto",
   paddingBottom: "2rem",

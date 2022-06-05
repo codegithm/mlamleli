@@ -17,7 +17,7 @@ import { useNavigate } from "react-router-dom";
 const responsiveDropdown = {
   position: "static",
   top: "104px",
-  marginTop: "136px",
+  marginTop: { lg: "136px", md: "136px", sm: "112px", xs: "112px" },
   display: { lg: "none", md: "none", sm: "flex", xs: "flex" },
   zIndex: 0,
 };
@@ -137,6 +137,9 @@ function Dropdown() {
                       <MenuItem onClick={handleCloseAbout}>OUR STORY</MenuItem>
                       <MenuItem onClick={handleCloseServices}>
                         OUR SERVICES
+                      </MenuItem>
+                      <MenuItem onClick={handleCloseServices}>
+                        OUR FUNERALS
                       </MenuItem>
                       <MenuItem onClick={handleCloseContact}>
                         CONTACT US

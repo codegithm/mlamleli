@@ -102,6 +102,30 @@ function Footer() {
         <Box
           flex={1}
           sx={{
+            backgroundColor: "#423b3d",
+            height: 48,
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            cursor: "pointer",
+          }}
+          onClick={() => {
+            navigate("/about");
+            setFooterColor("#423b3d");
+          }}
+        >
+          <Typography
+            variant='h5'
+            sx={{
+              fontSize: "17px",
+            }}
+          >
+            OUR FUNERALS
+          </Typography>
+        </Box>
+        <Box
+          flex={1}
+          sx={{
             backgroundColor: "#910024",
             height: 48,
             display: "flex",

@@ -1,17 +1,7 @@
-import React, { useState } from "react";
-import {
-  Box,
-  Paper,
-  Typography,
-  TextField,
-  Select,
-  MenuItem,
-  InputLabel,
-  FormControl,
-  Button,
-  Stack,
-} from "@mui/material";
+import React from "react";
+import { Box, Paper, Typography, Stack } from "@mui/material";
 import Back from "../assets/back.png";
+import SignUpForm from "./SignUpForm";
 
 const widthBox = window.innerWidth;
 const responsiveSignup = {
@@ -36,7 +26,6 @@ const responsivePaper = {
   minHeight: 400,
   height: "auto",
   maxWidth: "329.83px",
-  maxHeight: 480,
   borderRadius: 7,
   display: "flex",
   flexDirection: "column",
@@ -54,12 +43,9 @@ const resposniveHeader = {
 const headerCont = {
   marginBottom: { lg: "0px", sm: "20px", md: "20px", xs: "20px" },
 };
+
 function SignUp() {
-  const [plan, setPlan] = useState("");
   window.scrollTo(0, 0);
-  const handleChange = (event) => {
-    setPlan(event.target.value);
-  };
 
   return (
     <Box sx={responsiveSignup}>
@@ -107,78 +93,7 @@ function SignUp() {
           <Typography variant='h6' component='h1' textAlign={"center"}>
             To Sign you up we will need a few details from you
           </Typography>
-          <TextField
-            id='name'
-            label='Name'
-            variant='standard'
-            sx={{
-              marginTop: "17px",
-            }}
-            color='primary'
-          />
-          <TextField
-            id='email'
-            label='Email'
-            variant='standard'
-            sx={{
-              marginTop: "17px",
-            }}
-            color='primary'
-          />
-
-          <TextField
-            id='number'
-            label='Number'
-            variant='standard'
-            type='number'
-            InputLabelProps={{
-              shrink: true,
-            }}
-            sx={{
-              marginTop: "17px",
-            }}
-            color='primary'
-          />
-          <FormControl variant='standard' sx={{ marginTop: "17px" }}>
-            <InputLabel id='demo-simple-select-standard-label'>
-              Select a plan
-            </InputLabel>
-            <Select
-              labelId='demo-simple-select-standard-label'
-              id='demo-simple-select-standard'
-              value={plan}
-              onChange={handleChange}
-              label='Select a plan'
-              color='primary'
-            >
-              <MenuItem value={"1+5 Casket Funeral Plan"}>
-                1+5 Casket Funeral Plan
-              </MenuItem>
-              <MenuItem value={"1+9 Casket Funeral Plan"}>
-                1+9 Casket Funeral Plan
-              </MenuItem>
-              <MenuItem value={"Plan A 3 Tier Coffin Funeral Plan"}>
-                Plan A 3 Tier Coffin Funeral Plan
-              </MenuItem>
-              <MenuItem value={"Plan B Family Casket Funeral Plan"}>
-                Plan B Family Casket Funeral Plan
-              </MenuItem>
-              <MenuItem value={"Plan C Family Casket Funeral Plan"}>
-                Plan C Family Casket Funeral Plan
-              </MenuItem>
-            </Select>
-          </FormControl>
-
-          <Button
-            variant='contained'
-            href='#'
-            sx={{
-              marginTop: "17px",
-              backgroundColor: "primary",
-            }}
-          >
-            SIGN UP
-          </Button>
+          <SignUpForm />
         </Paper>
       </Box>
     </Box>

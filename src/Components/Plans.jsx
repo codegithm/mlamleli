@@ -46,21 +46,21 @@ function Plans() {
           details='1+5 Casket Service Plan'
           covered='18-64 R12 000 Cover'
           premium='R195 pm'
-          backColor={width < 900 ? "#910024" : "#f2d02f"}
+          backColor='#910024'
         />
         <Plan
           plan='Plan 2'
           details='1+5 Casket Service Plan'
           covered='18-64 R12 000 Cover'
           premium='R260 pm'
-          backColor={width < 900 ? "#910024" : "#f2d02f"}
+          backColor='#910024'
         />
         <Plan
           plan='Plan 3'
           details='Plan A 3 Tier Coffin Plan'
           covered='18-64 R10 000 Cover'
           premium='R195 pm'
-          backColor={width < 900 ? "#910024" : "#f2d02f"}
+          backColor='#910024'
         />
       </Box>
       <Box direction='row' sx={secPlans}>
@@ -69,14 +69,14 @@ function Plans() {
           details='Plan C Family Casket Plan'
           covered='18-64 R20 000 Cover'
           premium='R170 pm'
-          backColor={width < 900 ? "#910024" : "#f2d02f"}
+          backColor='#910024'
         />
         <Plan
           plan='Plan 5'
           details='Plan B Family Casket Plan'
           covered='18-64 R10 000 Cover'
           premium='R195 pm'
-          backColor={width < 900 ? "#910024" : "#f2d02f"}
+          backColor='#910024'
         />
       </Box>
     </Stack>

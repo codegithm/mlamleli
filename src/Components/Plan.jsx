@@ -1,5 +1,5 @@
 import React from "react";
-import { Paper, Box, Stack, Typography } from "@mui/material";
+import { Paper, Box, Stack, Typography, Button } from "@mui/material";
 const responsivePaper = {
   minWidth: 245,
   width: "auto",
@@ -18,10 +18,21 @@ const responsivePaper = {
 function Plan({ plan, details, covered, premium, backColor }) {
   return (
     <Paper elevation={4} sx={responsivePaper}>
-      <Stack direction='column'>
+      <Stack
+        direction='column'
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
         <Box
           sx={{
-            paddingLeft: "10px",
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "center",
           }}
         >
           <Typography variant='h4' component='h2'>
@@ -89,6 +100,22 @@ function Plan({ plan, details, covered, premium, backColor }) {
           <Typography variant='h4' component='p'>
             {premium}
           </Typography>
+        </Box>
+        <Box
+          sx={{
+            width: "90%",
+          }}
+        >
+          <Button
+            variant='contained'
+            sx={{
+              marginTop: "17px",
+              backgroundColor: "primary",
+            }}
+            fullWidth
+          >
+            More Info
+          </Button>
         </Box>
       </Stack>
     </Paper>

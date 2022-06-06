@@ -42,7 +42,7 @@ function Navbar() {
         zIndex: 100,
       }}
     >
-      <AppBar position='stikcy' sx={appBar}>
+      <AppBar position='relative' sx={appBar}>
         <Box sx={responsiveNavCont}>
           <Box
             component='img'

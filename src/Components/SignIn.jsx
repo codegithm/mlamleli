@@ -34,6 +34,7 @@ const responsivePaper = {
 };
 
 function SignIn() {
+  window.scrollTo(0, 0);
   return (
     <Stack direction={"column"} sx={responsiveSignInCont}>
       <Banner header='MEMBER LOGIN' bannerColor='#910024' />
@@ -42,6 +43,7 @@ function SignIn() {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
+          marginTop: "40px",
         }}
       >
         <Paper elevation={4} sx={responsivePaper}>

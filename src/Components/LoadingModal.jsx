@@ -23,7 +23,7 @@ const style = {
   flexDirection: "column",
 };
 
-function LoadingModal() {
+function LoadingModal({ message }) {
   const { modalLoad } = useContext(AppContext);
   const [open, setOpen] = modalLoad;
 
@@ -47,7 +47,7 @@ function LoadingModal() {
               component='h2'
               color='#910024'
             >
-              SENDING
+              {message}
             </Typography>
             <CircularProgress />
           </Box>

@@ -41,10 +41,11 @@ const details = {
   },
 };
 function Contact() {
+  window.scrollTo(0, 0);
   return (
     <Stack direction={"column"} sx={responsiveContactCont}>
-      <LoadingModal />
-      <Success />
+      <LoadingModal message='SENDING' />
+      <Success message='SENT' />
       <Banner header='CONTACT US' bannerColor='#910024' />
       <Box sx={details}>
         <Box>

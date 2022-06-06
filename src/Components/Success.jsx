@@ -23,7 +23,7 @@ const style = {
   flexDirection: "column",
 };
 
-function Success() {
+function Success({ message }) {
   const { modalSuccess } = useContext(AppContext);
   const [openSuccess, setOpenSuccess] = modalSuccess;
   const handleClose = () => setOpenSuccess(false);
@@ -48,7 +48,7 @@ function Success() {
               component='h2'
               color='#005a2f'
             >
-              SENT
+              {message}
             </Typography>
             <CheckCircleOutlinedIcon
               sx={{

@@ -17,15 +17,14 @@ const responsivePlansCont = {
   paddingBottom: "2rem",
   paddingTop: { lg: "2rem", sm: "0", md: "0px", xs: "0px" },
 };
-const secPlans = {
-  display: { lg: "flex", sm: "column", md: "flex", xs: "column" },
-  justifyContent: "center",
-  alignItems: "center",
-};
+
 const firstPlans = {
-  display: { lg: "flex", sm: "column", md: "flex", xs: "column" },
+  display: "flex",
+  flexDirection: { lg: "row", sm: "column", md: "row", xs: "column" },
   justifyContent: "center",
   alignItems: "center",
+  width: "100vw",
+  paddingTop: "30px",
 };
 function Plans() {
   window.scrollTo(0, 0);
@@ -62,8 +61,7 @@ function Plans() {
           premium='R195 pm'
           backColor='#910024'
         />
-      </Box>
-      <Box direction='row' sx={secPlans}>
+
         <Plan
           plan='Plan 4'
           details='Plan C Family Casket Plan'

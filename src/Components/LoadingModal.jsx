@@ -13,7 +13,7 @@ const style = {
   left: "50%",
   transform: "translate(-50%, -50%)",
   width: "200px",
-  bgcolor: "background.paper",
+  backgroundColor: "#fff",
   display: "flex",
   justifyContent: "center",
   alignItems: "center",

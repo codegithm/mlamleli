@@ -2,7 +2,9 @@ import React from "react";
 import { Box, Paper, Typography, Stack } from "@mui/material";
 import Back from "../assets/back.png";
 import SignUpForm from "./SignUpForm";
-
+import LoadingModal from "./LoadingModal";
+import Success from "./Success";
+import Error from "./Error";
 const widthBox = window.innerWidth;
 const responsiveSignup = {
   marginTop: { lg: "104px", sm: "0px", xs: "0px", md: "104px" },
@@ -49,6 +51,9 @@ function SignUp() {
 
   return (
     <Box sx={responsiveSignup}>
+      <LoadingModal message='SENDING REQUEST' />
+      <Success message='SENT, WE WILL GET BACK TO YOU ASAP' />
+      <Error message='FAILED' />
       <Box
         flex={1}
         sx={{

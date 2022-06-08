@@ -1,5 +1,5 @@
 import React, { useRef, useContext } from "react";
-import { Paper, Button, TextField, Box } from "@mui/material";
+import { Paper, Button, TextField } from "@mui/material";
 import { useFormik } from "formik";
 import * as yup from "yup";
 import emailjs from "@emailjs/browser";
@@ -8,7 +8,6 @@ import { AppContext } from "../AppContext";
 const responsivePaper = {
   minWidth: 245,
   width: "auto",
-
   height: "auto",
   maxWidth: "329.83px",
   maxHeight: 480,
@@ -32,8 +31,9 @@ const validationSchema = yup.object({
 });
 
 function Enquiry() {
-  const { modalLoad, modalSuccess } = useContext(AppContext);
+  const { modalLoad, modalSuccess, error } = useContext(AppContext);
   const [open, setOpen] = modalLoad;
+  const [openError, setOpenError] = error;
   const [openSuccess, setOpenSuccess] = modalSuccess;
   const handleOpen = () => setOpen(true);
   const handleOpenSuccess = () => setOpenSuccess(true);
@@ -50,12 +50,13 @@ function Enquiry() {
         "6KiQB5SL_rMZaujzX"
       )
       .then(
-        (result) => {
+        () => {
           handleClose();
           handleOpenSuccess();
         },
-        (error) => {
-          console.log(error.text);
+        () => {
+          handleClose();
+          setOpenError(true);
         }
       );
   };

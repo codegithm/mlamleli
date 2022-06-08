@@ -3,7 +3,7 @@ import Backdrop from "@mui/material/Backdrop";
 import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
 import Fade from "@mui/material/Fade";
-import CheckCircleOutlinedIcon from "@mui/icons-material/CheckCircleOutlined";
+import ErrorOutlineOutlined from "@mui/icons-material/ErrorOutlineOutlined";
 import Typography from "@mui/material/Typography";
 import { AppContext } from "../AppContext";
 
@@ -21,19 +21,18 @@ const style = {
   borderRadius: "15px",
   borderStyle: "none",
   flexDirection: "column",
-  textAlign: "center",
 };
 
-function Success({ message }) {
-  const { modalSuccess } = useContext(AppContext);
-  const [openSuccess, setOpenSuccess] = modalSuccess;
-  const handleClose = () => setOpenSuccess(false);
+function Error({ message }) {
+  const { error } = useContext(AppContext);
+  const [openError, setOpenError] = error;
+  const handleClose = () => setOpenError(false);
   return (
     <div>
       <Modal
         aria-labelledby='transition-modal-title'
         aria-describedby='transition-modal-description'
-        open={openSuccess}
+        open={openError}
         closeAfterTransition
         BackdropComponent={Backdrop}
         BackdropProps={{
@@ -41,20 +40,20 @@ function Success({ message }) {
         }}
         onClose={handleClose}
       >
-        <Fade in={openSuccess}>
+        <Fade in={openError}>
           <Box sx={style}>
             <Typography
               id='transition-modal-title'
               variant='h6'
               component='h2'
-              color='#005a2f'
+              color='red'
             >
               {message}
             </Typography>
-            <CheckCircleOutlinedIcon
+            <ErrorOutlineOutlined
               sx={{
                 fontSize: "60px",
-                color: "#005a2f",
+                color: "red",
               }}
             />
           </Box>
@@ -64,4 +63,4 @@ function Success({ message }) {
   );
 }
 
-export default Success;
+export default Error;

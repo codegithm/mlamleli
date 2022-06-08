@@ -11,6 +11,7 @@ import Banner from "./Banner";
 import Enquiry from "./Enquiry";
 import LoadingModal from "./LoadingModal";
 import Success from "./Success";
+import Error from "./Error";
 
 const widthBox = window.innerWidth;
 const responsiveContactCont = {
@@ -46,6 +47,7 @@ function Contact() {
     <Stack direction={"column"} sx={responsiveContactCont}>
       <LoadingModal message='SENDING' />
       <Success message='SENT' />
+      <Error message='FAILED' />
       <Banner header='CONTACT US' bannerColor='#910024' />
       <Box sx={details}>
         <Box>

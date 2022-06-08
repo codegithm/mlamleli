@@ -2,6 +2,18 @@
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+import {
+  deleteDoc,
+  getFirestore,
+  collection,
+  getDocs,
+  addDoc,
+  updateDoc,
+  doc,
+  query,
+  where,
+  setDoc,
+} from "firebase/firestore/lite";
 
 const firebaseConfig = {
   apiKey: "AIzaSyCBE6RXCVYT6SG2a6VRRO_TuNMAV32t_tE",
@@ -16,7 +28,8 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
-const auth = getAuth(app);
+export const auth = getAuth(app);
+export const db = getFirestore(app);
 
 export function signUp(email, password) {
   createUserWithEmailAndPassword(auth, email, password)
@@ -26,4 +39,10 @@ export function signUp(email, password) {
     .catch(() => {
       return false;
     });
+}
+
+//Add data
+export async function addNewCustomer(data) {
+  let res = await setDoc(db.collection("Custormer"), data);
+  return res;
 }

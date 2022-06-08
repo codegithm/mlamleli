@@ -1,0 +1,15 @@
+.footer {
+  position: absolute;
+  bottom: 0;
+}
+.footer-band {
+  height: 14px !important;
+}
+.footer-content {
+  height: 80px;
+  background-color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}

@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useContext } from "react";
 import { useFormik } from "formik";
 import * as yup from "yup";
 import {
@@ -10,6 +10,10 @@ import {
   Button,
   Typography,
 } from "@mui/material";
+import emailjs from "@emailjs/browser";
+import { AppContext } from "../AppContext";
+import { addNewCustomer } from "../firebase/firebase";
+import { RestaurantMenuOutlined } from "@mui/icons-material";
 
 const validationSchema = yup.object({
   fname: yup
@@ -20,10 +24,6 @@ const validationSchema = yup.object({
     .string("Enter your email")
     .email("Enter a valid email")
     .required("Email is required"),
-  password: yup
-    .string("Enter your message")
-    .min(8, "Message should be of minimum 8 characters length")
-    .required("Password is required"),
   number: yup
     .string("Enter cellphone number")
     .min(9, "Cellphone number should be of minimum 10 characters length")
@@ -33,34 +33,75 @@ const validationSchema = yup.object({
 function SignUpForm() {
   const [plan, setPlan] = useState("");
   const [planSelected, setPlanSelected] = useState(true);
+  const { modalLoad, modalSuccess, error } = useContext(AppContext);
+  const [open, setOpen] = modalLoad;
+  const [openError, setOpenError] = error;
+  const [openSuccess, setOpenSuccess] = modalSuccess;
+  const handleOpen = () => setOpen(true);
+  const handleOpenSuccess = () => setOpenSuccess(true);
+  const handleClose = () => setOpen(false);
+
   const form = useRef();
 
+  const sendEmail = () => {
+    emailjs
+      .sendForm(
+        "service_uz3xe7v",
+        "template_gfd4o2z",
+        form.current,
+        "6KiQB5SL_rMZaujzX"
+      )
+      .then(
+        () => {
+          document.getElementsByName("fname").value = "";
+          document.getElementsByName("email").value = "";
+          document.getElementsByName("number").value = "";
+          document.getElementsByName("plan").value = "";
+          setPlan("");
+        },
+        () => {
+          handleClose();
+          setOpenError(true);
+        }
+      );
+  };
   const handleChange = (event) => {
     setPlan(event.target.value);
     setPlanSelected(true);
+  };
+
+  //Database
+  const addCustomer = (data) => {
+    // handleOpen();
+
+    console.log(addNewCustomer(data));
+    // } catch {
+    //   handleClose();
+    //   setOpenError(true);
+    //   return;
+    // }
+    // handleClose();
+    // handleOpenSuccess();
   };
   const formik = useFormik({
     initialValues: {
       fname: "",
       email: "",
-      password: "",
       number: "",
     },
     validationSchema: validationSchema,
     onSubmit: (values) => {
       if (plan !== "") {
         setPlanSelected(true);
-        const signIn = {
-          email: values.email,
-          password: values.password,
-        };
+
         const toDB = {
           name: values.fname,
+          email: values.email,
           number: values.number,
           plan: plan,
         };
-        console.log(signIn);
-        console.log(toDB);
+
+        addCustomer(toDB);
       } else {
         setPlanSelected(false);
       }
@@ -96,24 +137,10 @@ function SignUpForm() {
         }}
         color='primary'
       />
-      <TextField
-        type='password'
-        id='password'
-        label='Password'
-        name='password'
-        variant='standard'
-        sx={{
-          marginTop: "17px",
-        }}
-        color='primary'
-        value={formik.values.password}
-        onChange={formik.handleChange}
-        error={formik.touched.password && Boolean(formik.errors.password)}
-        helperText={formik.touched.password && formik.errors.password}
-      />
 
       <TextField
         id='number'
+        name='number'
         label='Number'
         variant='standard'
         type='number'
@@ -137,6 +164,7 @@ function SignUpForm() {
           labelId='demo-simple-select-standard-label'
           id='demo-simple-select-standard'
           value={plan}
+          name='plan'
           onChange={handleChange}
           label='Select a plan'
           color='primary'

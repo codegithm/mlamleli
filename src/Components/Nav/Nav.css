@@ -1,0 +1,32 @@
+.band {
+  min-width: 100vw;
+  display: flex;
+}
+.band1 {
+  height: 32px;
+  background-color: red;
+  width: 25vw;
+}
+.band2 {
+  height: 32px;
+  background-color: blue;
+  width: 25vw;
+}
+.band3 {
+  height: 32px;
+  background-color: orange;
+  width: 25vw;
+}
+.band4 {
+  height: 32px;
+  background-color: brown;
+  width: 25vw;
+}
+.band5 {
+  height: 32px;
+  background-color: red;
+  width: 25vw;
+}
+.nav-main-cont {
+  width: 100vw;
+}

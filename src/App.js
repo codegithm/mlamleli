@@ -10,8 +10,12 @@ import Contact from "./Components/Contact";
 import About from "./Components/About";
 import Plans from "./Components/Plans";
 import Services from "./Components/Services";
+import { auth } from "./firebase/firebase";
 
 function App() {
+  auth.onAuthStateChanged((user) => {
+    console.log(user);
+  });
   return (
     <Box
       sx={{

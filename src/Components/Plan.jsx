@@ -1,12 +1,12 @@
 import React from "react";
 import { Paper, Box, Stack, Typography, Button } from "@mui/material";
+import PlanAccordion from "./PlanAccordion";
 const responsivePaper = {
   width: "auto",
   paddingTop: "2rem",
   paddingBottom: "2rem",
   height: "auto",
   maxWidth: "329.83px",
-  maxHeight: 480,
   display: "flex",
   flexDirection: "column",
   backgroundColor: "grey",
@@ -103,12 +103,16 @@ function Plan({ plan, details, covered, premium, backColor }) {
         </Box>
         <Box
           sx={{
-            width: "90%",
+            width: "100%",
           }}
         >
-          <Button variant='contained' sx={expandBtn} fullWidth>
-            Click to expand & view benefits
-          </Button>
+          <PlanAccordion
+            viewBtn={
+              <Button variant='contained' sx={expandBtn} fullWidth>
+                Click to expand & view benefits
+              </Button>
+            }
+          />
         </Box>
       </Stack>
     </Paper>

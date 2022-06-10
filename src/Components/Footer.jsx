@@ -110,7 +110,7 @@ function Footer() {
             cursor: "pointer",
           }}
           onClick={() => {
-            navigate("/about");
+            navigate("/funerals");
             setFooterColor("#423b3d");
           }}
         >

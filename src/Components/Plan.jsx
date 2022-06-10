@@ -23,6 +23,7 @@ const expandBtn = {
 };
 const detailsStyle = {
   fontSize: { lg: "14px", sm: "19px", md: "14px", xs: "19px" },
+  textAlign: "center",
 };
 const coverdStyle = {
   fontSize: { lg: "11px", sm: "14px", md: "11px", xs: "14px" },

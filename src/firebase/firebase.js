@@ -42,7 +42,13 @@ export function signUp(email, password) {
 }
 
 //Add data
-export async function addNewCustomer(data) {
-  let res = await setDoc(db.collection("Custormer"), data);
-  return res;
+export function addNewCustomer(data) {
+  let colRef = collection(db, "Custormer");
+  addDoc(colRef, data)
+    .then(() => {
+      return true;
+    })
+    .catch((e) => {
+      throw new Error(e);
+    });
 }

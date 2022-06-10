@@ -44,6 +44,7 @@ function SignUpForm() {
   const form = useRef();
 
   const sendEmail = () => {
+    handleOpen();
     emailjs
       .sendForm(
         "service_uz3xe7v",
@@ -51,19 +52,19 @@ function SignUpForm() {
         form.current,
         "6KiQB5SL_rMZaujzX"
       )
-      .then(
-        () => {
-          document.getElementsByName("fname").value = "";
-          document.getElementsByName("email").value = "";
-          document.getElementsByName("number").value = "";
-          document.getElementsByName("plan").value = "";
-          setPlan("");
-        },
-        () => {
-          handleClose();
-          setOpenError(true);
-        }
-      );
+      .then(() => {
+        document.getElementsByName("fname").value = "";
+        document.getElementsByName("email").value = "";
+        document.getElementsByName("number").value = "";
+        document.getElementsByName("plan").value = "";
+        setPlan("");
+        handleClose();
+        handleOpenSuccess();
+      })
+      .catch(() => {
+        handleClose();
+        setOpenError(true);
+      });
   };
   const handleChange = (event) => {
     setPlan(event.target.value);
@@ -72,17 +73,16 @@ function SignUpForm() {
 
   //Database
   const addCustomer = (data) => {
-    // handleOpen();
-
-    console.log(addNewCustomer(data));
-    // } catch {
-    //   handleClose();
-    //   setOpenError(true);
-    //   return;
-    // }
-    // handleClose();
-    // handleOpenSuccess();
+    try {
+      sendEmail();
+      addNewCustomer(data);
+    } catch {
+      handleClose();
+      setOpenError(true);
+      return;
+    }
   };
+
   const formik = useFormik({
     initialValues: {
       fname: "",
@@ -100,7 +100,6 @@ function SignUpForm() {
           number: values.number,
           plan: plan,
         };
-
         addCustomer(toDB);
       } else {
         setPlanSelected(false);

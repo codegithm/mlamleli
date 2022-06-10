@@ -7,6 +7,7 @@ export const AppProvider = (props) => {
   const [open, setOpen] = useState(false);
   const [openSuccess, setOpenSuccess] = useState(false);
   const [openError, setOpenError] = useState(false);
+  const [gallery, setGallery] = useState([]);
 
   return (
     <AppContext.Provider
@@ -15,6 +16,7 @@ export const AppProvider = (props) => {
         modalLoad: [open, setOpen],
         modalSuccess: [openSuccess, setOpenSuccess],
         error: [openError, setOpenError],
+        galleryArr: [gallery, setGallery],
       }}
     >
       {props.children}

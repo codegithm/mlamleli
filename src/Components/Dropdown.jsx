@@ -64,6 +64,13 @@ function Dropdown() {
     setOpen(false);
     navigate("/services");
   };
+  const handleCloseFunerals = (event) => {
+    if (anchorRef.current && anchorRef.current.contains(event.target)) {
+    }
+
+    setOpen(false);
+    navigate("/funerals");
+  };
   function handleListKeyDown(event) {
     if (event.key === "Tab") {
       event.preventDefault();
@@ -138,7 +145,7 @@ function Dropdown() {
                       <MenuItem onClick={handleCloseServices}>
                         OUR SERVICES
                       </MenuItem>
-                      <MenuItem onClick={handleCloseServices}>
+                      <MenuItem onClick={handleCloseFunerals}>
                         OUR FUNERALS
                       </MenuItem>
                       <MenuItem onClick={handleCloseContact}>

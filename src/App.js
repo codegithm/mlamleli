@@ -10,7 +10,9 @@ import Contact from "./Components/Contact";
 import About from "./Components/About";
 import Plans from "./Components/Plans";
 import Services from "./Components/Services";
+import Funerals from "./Components/Funerals";
 import { auth } from "./firebase/firebase";
+import Gallery from "./Components/Gallery";
 
 function App() {
   auth.onAuthStateChanged((user) => {
@@ -35,8 +37,12 @@ function App() {
           <Route path='/about' element={<About />} />
           <Route path='/plans' element={<Plans />} />
           <Route path='/services' element={<Services />} />
+          <Route path='/funerals' element={<Funerals />} />
         </Routes>
         <Footer />
+        <Routes>
+          <Route path='/gallery' element={<Gallery />} />
+        </Routes>
       </Router>
     </Box>
   );

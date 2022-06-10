@@ -25,6 +25,9 @@ const firstPlans = {
   alignItems: "center",
   width: "100vw",
   paddingTop: "30px",
+  paddingLeft: { lg: "10px", sm: "0px", md: "10px", xs: "0px" },
+  paddingRight: { lg: "10px", sm: "0px", md: "10px", xs: "0px" },
+  flexWrap: { lg: "nowrap", sm: "nowrap", md: "wrap", xs: "nowrap" },
 };
 function Plans() {
   window.scrollTo(0, 0);
@@ -43,20 +46,20 @@ function Plans() {
         <Plan
           plan='Plan 1'
           details='1+5 Casket Service Plan'
-          covered='18-64 R12 000 Cover'
+          covered='18-64 R12 500 Cover'
           premium='R195 pm'
           backColor='#910024'
         />
         <Plan
           plan='Plan 2'
-          details='1+5 Casket Service Plan'
+          details='1+9 Casket Funeral Plan'
           covered='18-64 R12 000 Cover'
           premium='R260 pm'
           backColor='#910024'
         />
         <Plan
           plan='Plan 3'
-          details='Plan A 3 Tier Coffin Plan'
+          details='Plan A 3 Tier Coffin Funeral Plan'
           covered='18-64 R10 000 Cover'
           premium='R195 pm'
           backColor='#910024'
@@ -64,14 +67,14 @@ function Plans() {
 
         <Plan
           plan='Plan 4'
-          details='Plan C Family Casket Plan'
+          details='Plan B Family Casket Funeral Plan'
           covered='18-64 R20 000 Cover'
           premium='R170 pm'
           backColor='#910024'
         />
         <Plan
           plan='Plan 5'
-          details='Plan B Family Casket Plan'
+          details='Plan C Family Casket Funeral Plan'
           covered='18-64 R10 000 Cover'
           premium='R195 pm'
           backColor='#910024'

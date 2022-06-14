@@ -54,9 +54,6 @@ function Services() {
             fontWeight: 500,
             color: "#910024",
             padding: "15px",
-            border: "solid 3px",
-            borderRadius: "15px",
-            backgroundColor: "#f2d02f",
           }}
         >
           We offer

@@ -8,6 +8,7 @@ import {
   ListItemText,
 } from "@mui/material";
 import Banner from "./Banner";
+import Service from "./Service";
 
 const widthBox = window.innerWidth;
 const responsiveServicesCont = {
@@ -38,6 +39,11 @@ function Services() {
           paddingLeft: "20px",
           paddingRight: "20px",
           paddingTop: "20px",
+          minHeight: "400px",
+          justifyContent: "center",
+          alignItems: "center",
+          display: "flex",
+          flexDirection: "column",
         }}
       >
         <Typography
@@ -46,84 +52,34 @@ function Services() {
           sx={{
             fontSize: "20px",
             fontWeight: 500,
+            color: "#910024",
+            padding: "15px",
+            border: "solid 3px",
+            borderRadius: "15px",
+            backgroundColor: "#f2d02f",
           }}
         >
-          We offer:
+          We offer
         </Typography>
-        <List dense={false}>
-          <ListItem
-            sx={{
-              paddingTop: "0px",
-              paddingBottom: "0px",
-              fontSize: "7px",
-            }}
-          >
-            <ListItemText primary='Mortuary Storage services ' />
-          </ListItem>
-          <ListItem
-            sx={{
-              paddingTop: "0px",
-              paddingBottom: "0px",
-              fontSize: "10px",
-            }}
-          >
-            <ListItemText primary='Repatriation' />
-          </ListItem>
-          <ListItem
-            sx={{
-              paddingTop: "0px",
-              paddingBottom: "0px",
-              fontSize: "10px",
-            }}
-          >
-            <ListItemText primary='Burial services' />
-          </ListItem>
-          <ListItem
-            sx={{
-              paddingTop: "0px",
-              paddingBottom: "0px",
-              fontSize: "10px",
-            }}
-          >
-            <ListItemText primary='Cremations' />
-          </ListItem>
-          <ListItem
-            sx={{
-              paddingTop: "0px",
-              paddingBottom: "0px",
-              fontSize: "10px",
-            }}
-          >
-            <ListItemText primary='Financial services' />
-          </ListItem>
-          <ListItem
-            sx={{
-              paddingTop: "0px",
-              paddingBottom: "0px",
-              fontSize: "10px",
-            }}
-          >
-            <ListItemText primary='Tombstone Installations' />
-          </ListItem>
-          <ListItem
-            sx={{
-              paddingTop: "0px",
-              paddingBottom: "0px",
-              fontSize: "10px",
-            }}
-          >
-            <ListItemText primary='Exhumations' />
-          </ListItem>
-          <ListItem
-            sx={{
-              paddingTop: "0px",
-              paddingBottom: "0px",
-              fontSize: "10px",
-            }}
-          >
-            <ListItemText primary='Equipment Hire' />
-          </ListItem>
-        </List>
+        <Box
+          sx={{
+            display: "flex",
+            flexDirection: "row",
+            flexWrap: "wrap",
+            justifyContent: "center",
+            alignItems: "center",
+            marginTop: "30px",
+          }}
+        >
+          <Service name='Mortuary Storage services' />
+          <Service name='Repatriation' />
+          <Service name='Burial services' />
+          <Service name='Cremations' />
+          <Service name='Financial services' />
+          <Service name='Tombstone Installations' />
+          <Service name='Exhumations' />
+          <Service name='Equipment Hire' />
+        </Box>
       </Box>
     </Stack>
   );

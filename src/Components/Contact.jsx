@@ -33,7 +33,7 @@ const message = {
 const details = {
   paddingTop: "30px",
   display: "flex",
-  flexDirection: { lg: "row", sm: "column", md: "column", xs: "column" },
+  flexDirection: { lg: "column", sm: "column", md: "column", xs: "column" },
   justifyContent: {
     lg: "space-around",
     sm: "center",
@@ -55,7 +55,7 @@ function Contact() {
             variant='h4'
             component='h1'
             sx={{
-              fontSize: "17px",
+              fontSize: "18px",
               fontWeight: 500,
               textAlign: "center",
               color: "#910024",
@@ -65,7 +65,7 @@ function Contact() {
             Africa
           </Typography>
           <Stack
-            direction={"row"}
+            direction={"column"}
             sx={{
               paddingTop: "20px",
               justifyContent: "center",
@@ -75,101 +75,229 @@ function Contact() {
               sx={{
                 paddingLeft: "20px",
                 paddingRight: "20px",
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
               }}
             >
               <Typography
                 variant='h5'
                 component='h2'
                 sx={{
-                  fontSize: "14px",
+                  fontSize: "17px",
                   fontWeight: 500,
+                  textAlign: "center",
+                  marginBotton: "10px",
                 }}
               >
                 Eastern Cape Branches
               </Typography>
-              <List dense={false}>
-                <ListItem
-                  sx={{
-                    paddingTop: "0px",
-                    paddingBottom: "0px",
-                    fontSize: "7px",
-                  }}
-                >
-                  <ListItemText primary='Sterkspruit' />
-                </ListItem>
-                <ListItem
-                  sx={{
-                    paddingTop: "0px",
-                    paddingBottom: "0px",
-                    fontSize: "10px",
-                  }}
-                >
-                  <ListItemText primary='Barkly East' />
-                </ListItem>
-                <ListItem
-                  sx={{
-                    paddingTop: "0px",
-                    paddingBottom: "0px",
-                    fontSize: "10px",
-                  }}
-                >
-                  <ListItemText primary='Burgersdorp' />
-                </ListItem>
-                <ListItem
-                  sx={{
-                    paddingTop: "0px",
-                    paddingBottom: "0px",
-                    fontSize: "10px",
-                  }}
-                >
-                  <ListItemText primary='Venterstad' />
-                </ListItem>
-              </List>
-            </Box>
-            <Box>
-              <Typography
-                variant='h5'
-                component='h2'
+              <Box
                 sx={{
-                  fontSize: "14px",
-                  fontWeight: 500,
+                  display: "flex",
+                  flexWrap: "wrap",
+                  justifyContent: "space-between",
+                  maxWidth: "900px",
                 }}
               >
-                Free State Branches
-              </Typography>
-              <List dense={false}>
-                <ListItem
+                <Box
                   sx={{
-                    paddingTop: "0px",
-                    paddingBottom: "0px",
-                    fontSize: "7px",
+                    display: "flex",
+                    flexDirection: "column",
+                    fontSize: "15px",
+                    margin: "10px",
                   }}
                 >
-                  <ListItemText primary='Bethulie' />
-                </ListItem>
-                <ListItem
+                  <Typography variant='h6'>Sterkspruit</Typography>
+                  <Box
+                    sx={{
+                      display: "flex",
+                      flexDirection: "column",
+                    }}
+                  >
+                    <Typography variant='p'>27 Main Street</Typography>
+                    <Typography variant='p'>Sterkspruit</Typography>
+                    <Typography variant='p'>Eastern Cape</Typography>
+                    <Typography variant='p'>9762</Typography>
+                  </Box>
+                </Box>
+
+                <Box
                   sx={{
-                    paddingTop: "0px",
-                    paddingBottom: "0px",
-                    fontSize: "10px",
+                    display: "flex",
+                    flexDirection: "column",
+                    fontSize: "15px",
+                    margin: "10px",
                   }}
                 >
-                  <ListItemText primary='Springfontein' />
-                </ListItem>
-                <ListItem
+                  <Typography variant='h6'>Barkly East</Typography>
+                  <Box
+                    sx={{
+                      display: "flex",
+                      flexDirection: "column",
+                    }}
+                  >
+                    <Typography variant='p'>27 Main Street</Typography>
+                    <Typography variant='p'>Sterkspruit</Typography>
+                    <Typography variant='p'>Eastern Cape</Typography>
+                    <Typography variant='p'>9762</Typography>
+                  </Box>
+                </Box>
+                <Box
                   sx={{
-                    paddingTop: "0px",
-                    paddingBottom: "0px",
-                    fontSize: "10px",
+                    display: "flex",
+                    flexDirection: "column",
+                    fontSize: "15px",
+                    margin: "10px",
                   }}
                 >
-                  <ListItemText primary='Rouxville' />
-                </ListItem>
-              </List>
+                  <Typography variant='h6'>Venterstad</Typography>
+                  <Box
+                    sx={{
+                      display: "flex",
+                      flexDirection: "column",
+                    }}
+                  >
+                    <Typography variant='p'>27 Main Street</Typography>
+                    <Typography variant='p'>Sterkspruit</Typography>
+                    <Typography variant='p'>Eastern Cape</Typography>
+                    <Typography variant='p'>9762</Typography>
+                  </Box>
+                </Box>
+                <Box
+                  sx={{
+                    display: "flex",
+                    flexDirection: "column",
+                    fontSize: "15px",
+                    margin: "10px",
+                  }}
+                >
+                  <Typography variant='h6'>Burgersdorp</Typography>
+                  <Box
+                    sx={{
+                      display: "flex",
+                      flexDirection: "column",
+                    }}
+                  >
+                    <Typography variant='p'>
+                      Cnr of Coligny & Bird Str
+                    </Typography>
+                    <Typography variant='p'>Burgersdorp</Typography>
+                    <Typography variant='p'>Eastern Cape</Typography>
+                    <Typography variant='p'>9744</Typography>
+                  </Box>
+                </Box>
+              </Box>
+            </Box>
+            <Box
+              sx={{
+                paddingLeft: "20px",
+                paddingRight: "20px",
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+              }}
+            >
+              <Box
+                sx={{
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "center",
+                }}
+              >
+                <Typography
+                  variant='h5'
+                  component='h2'
+                  sx={{
+                    fontSize: "17px",
+                    fontWeight: 500,
+                    textAlign: "center",
+                    marginBotton: "10px",
+                  }}
+                >
+                  Free State Branches
+                </Typography>
+                <Box
+                  sx={{
+                    display: "flex",
+                    flexWrap: "wrap",
+                    justifyContent: "space-between",
+                    maxWidth: "900px",
+                  }}
+                >
+                  <Box
+                    sx={{
+                      display: "flex",
+                      flexDirection: "column",
+                      fontSize: "15px",
+                      margin: "10px",
+                    }}
+                  >
+                    <Typography variant='h6'>Bethulie</Typography>
+                    <Box
+                      sx={{
+                        display: "flex",
+                        flexDirection: "column",
+                      }}
+                    >
+                      <Typography variant='p'>22 Voortrekker Street</Typography>
+                      <Typography variant='p'>Bethulile</Typography>
+                      <Typography variant='p'>Free State</Typography>
+                      <Typography variant='p'>9992</Typography>
+                    </Box>
+                  </Box>
+                  <Box
+                    sx={{
+                      display: "flex",
+                      flexDirection: "column",
+                      fontSize: "15px",
+                      margin: "10px",
+                    }}
+                  >
+                    <Typography variant='h6'>Springfontein</Typography>
+                    <Box
+                      sx={{
+                        display: "flex",
+                        flexDirection: "column",
+                      }}
+                    >
+                      <Typography variant='p'>27 Main Street</Typography>
+                      <Typography variant='p'>Sterkspruit</Typography>
+                      <Typography variant='p'>Eastern Cape</Typography>
+                      <Typography variant='p'>9762</Typography>
+                    </Box>
+                  </Box>
+                  <Box
+                    sx={{
+                      display: "flex",
+                      flexDirection: "column",
+                      fontSize: "15px",
+                      margin: "10px",
+                    }}
+                  >
+                    <Typography variant='h6'>Rouxville</Typography>
+                    <Box
+                      sx={{
+                        display: "flex",
+                        flexDirection: "column",
+                      }}
+                    >
+                      <Typography variant='p'>27 Main Street</Typography>
+                      <Typography variant='p'>Sterkspruit</Typography>
+                      <Typography variant='p'>Eastern Cape</Typography>
+                      <Typography variant='p'>9762</Typography>
+                    </Box>
+                  </Box>
+                </Box>
+              </Box>
             </Box>
           </Stack>
         </Box>
-        <Box>
+        <Box
+          sx={{
+            marginTop: "15px",
+          }}
+        >
           <Typography
             variant='h4'
             component='h1'

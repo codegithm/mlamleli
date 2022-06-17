@@ -98,6 +98,7 @@ function Contact() {
                   flexWrap: "wrap",
                   justifyContent: "space-between",
                   maxWidth: "900px",
+                  width: "100%",
                 }}
               >
                 <Box
@@ -119,6 +120,31 @@ function Contact() {
                     <Typography variant='p'>Sterkspruit</Typography>
                     <Typography variant='p'>Eastern Cape</Typography>
                     <Typography variant='p'>9762</Typography>
+                    <Stack
+                      direction='row'
+                      sx={{
+                        alignItems: "center",
+                      }}
+                    >
+                      <Typography variant='h6' sx={{ fontSize: "14px" }}>
+                        Tel:
+                      </Typography>{" "}
+                      <Typography variant='p'> 011 883 9876</Typography>
+                    </Stack>
+                    <Stack
+                      direction='row'
+                      sx={{
+                        alignItems: "center",
+                      }}
+                    >
+                      <Typography
+                        variant='h6'
+                        sx={{ fontSize: "14px", fontWeight: 500 }}
+                      >
+                        Email:
+                      </Typography>{" "}
+                      <Typography variant='p'> admin@</Typography>
+                    </Stack>
                   </Box>
                 </Box>
 
@@ -141,6 +167,31 @@ function Contact() {
                     <Typography variant='p'>Sterkspruit</Typography>
                     <Typography variant='p'>Eastern Cape</Typography>
                     <Typography variant='p'>9762</Typography>
+                    <Stack
+                      direction='row'
+                      sx={{
+                        alignItems: "center",
+                      }}
+                    >
+                      <Typography variant='h6' sx={{ fontSize: "14px" }}>
+                        Tel:
+                      </Typography>{" "}
+                      <Typography variant='p'> 011 883 9876</Typography>
+                    </Stack>
+                    <Stack
+                      direction='row'
+                      sx={{
+                        alignItems: "center",
+                      }}
+                    >
+                      <Typography
+                        variant='h6'
+                        sx={{ fontSize: "14px", fontWeight: 500 }}
+                      >
+                        Email:
+                      </Typography>{" "}
+                      <Typography variant='p'> admin@</Typography>
+                    </Stack>
                   </Box>
                 </Box>
                 <Box
@@ -162,6 +213,31 @@ function Contact() {
                     <Typography variant='p'>Sterkspruit</Typography>
                     <Typography variant='p'>Eastern Cape</Typography>
                     <Typography variant='p'>9762</Typography>
+                    <Stack
+                      direction='row'
+                      sx={{
+                        alignItems: "center",
+                      }}
+                    >
+                      <Typography variant='h6' sx={{ fontSize: "14px" }}>
+                        Tel:
+                      </Typography>{" "}
+                      <Typography variant='p'> 011 883 9876</Typography>
+                    </Stack>
+                    <Stack
+                      direction='row'
+                      sx={{
+                        alignItems: "center",
+                      }}
+                    >
+                      <Typography
+                        variant='h6'
+                        sx={{ fontSize: "14px", fontWeight: 500 }}
+                      >
+                        Email:
+                      </Typography>{" "}
+                      <Typography variant='p'> admin@</Typography>
+                    </Stack>
                   </Box>
                 </Box>
                 <Box
@@ -185,6 +261,31 @@ function Contact() {
                     <Typography variant='p'>Burgersdorp</Typography>
                     <Typography variant='p'>Eastern Cape</Typography>
                     <Typography variant='p'>9744</Typography>
+                    <Stack
+                      direction='row'
+                      sx={{
+                        alignItems: "center",
+                      }}
+                    >
+                      <Typography variant='h6' sx={{ fontSize: "14px" }}>
+                        Tel:
+                      </Typography>{" "}
+                      <Typography variant='p'> 011 883 9876</Typography>
+                    </Stack>
+                    <Stack
+                      direction='row'
+                      sx={{
+                        alignItems: "center",
+                      }}
+                    >
+                      <Typography
+                        variant='h6'
+                        sx={{ fontSize: "14px", fontWeight: 500 }}
+                      >
+                        Email:
+                      </Typography>{" "}
+                      <Typography variant='p'> admin@</Typography>
+                    </Stack>
                   </Box>
                 </Box>
               </Box>
@@ -203,6 +304,8 @@ function Contact() {
                   display: "flex",
                   flexDirection: "column",
                   justifyContent: "center",
+                  alignItems: "center",
+                  width: "100%",
                 }}
               >
                 <Typography
@@ -222,7 +325,8 @@ function Contact() {
                     display: "flex",
                     flexWrap: "wrap",
                     justifyContent: "space-between",
-                    maxWidth: "900px",
+                    maxWidth: "776px",
+                    width: "100%",
                   }}
                 >
                   <Box
@@ -244,6 +348,31 @@ function Contact() {
                       <Typography variant='p'>Bethulile</Typography>
                       <Typography variant='p'>Free State</Typography>
                       <Typography variant='p'>9992</Typography>
+                      <Stack
+                        direction='row'
+                        sx={{
+                          alignItems: "center",
+                        }}
+                      >
+                        <Typography variant='h6' sx={{ fontSize: "14px" }}>
+                          Tel:
+                        </Typography>{" "}
+                        <Typography variant='p'> 011 883 9876</Typography>
+                      </Stack>
+                      <Stack
+                        direction='row'
+                        sx={{
+                          alignItems: "center",
+                        }}
+                      >
+                        <Typography
+                          variant='h6'
+                          sx={{ fontSize: "14px", fontWeight: 500 }}
+                        >
+                          Email:
+                        </Typography>{" "}
+                        <Typography variant='p'> admin@</Typography>
+                      </Stack>
                     </Box>
                   </Box>
                   <Box
@@ -265,6 +394,31 @@ function Contact() {
                       <Typography variant='p'>Sterkspruit</Typography>
                       <Typography variant='p'>Eastern Cape</Typography>
                       <Typography variant='p'>9762</Typography>
+                      <Stack
+                        direction='row'
+                        sx={{
+                          alignItems: "center",
+                        }}
+                      >
+                        <Typography variant='h6' sx={{ fontSize: "14px" }}>
+                          Tel:
+                        </Typography>{" "}
+                        <Typography variant='p'> 011 883 9876</Typography>
+                      </Stack>
+                      <Stack
+                        direction='row'
+                        sx={{
+                          alignItems: "center",
+                        }}
+                      >
+                        <Typography
+                          variant='h6'
+                          sx={{ fontSize: "14px", fontWeight: 500 }}
+                        >
+                          Email:
+                        </Typography>{" "}
+                        <Typography variant='p'> admin@</Typography>
+                      </Stack>
                     </Box>
                   </Box>
                   <Box
@@ -286,6 +440,31 @@ function Contact() {
                       <Typography variant='p'>Sterkspruit</Typography>
                       <Typography variant='p'>Eastern Cape</Typography>
                       <Typography variant='p'>9762</Typography>
+                      <Stack
+                        direction='row'
+                        sx={{
+                          alignItems: "center",
+                        }}
+                      >
+                        <Typography variant='h6' sx={{ fontSize: "14px" }}>
+                          Tel:
+                        </Typography>{" "}
+                        <Typography variant='p'> 011 883 9876</Typography>
+                      </Stack>
+                      <Stack
+                        direction='row'
+                        sx={{
+                          alignItems: "center",
+                        }}
+                      >
+                        <Typography
+                          variant='h6'
+                          sx={{ fontSize: "14px", fontWeight: 500 }}
+                        >
+                          Email:
+                        </Typography>{" "}
+                        <Typography variant='p'> admin@</Typography>
+                      </Stack>
                     </Box>
                   </Box>
                 </Box>

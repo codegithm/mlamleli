@@ -129,7 +129,7 @@ function Contact() {
                       <Typography variant='h6' sx={{ fontSize: "14px" }}>
                         Tel:
                       </Typography>{" "}
-                      <Typography variant='p'> 011 883 9876</Typography>
+                      <Typography variant='p'> 051 611 0013</Typography>
                     </Stack>
                     <Stack
                       direction='row'
@@ -143,7 +143,10 @@ function Contact() {
                       >
                         Email:
                       </Typography>{" "}
-                      <Typography variant='p'> admin@</Typography>
+                      <Typography variant='p'>
+                        {" "}
+                        {" info@mlamlelifunerals.co.za"}
+                      </Typography>
                     </Stack>
                   </Box>
                 </Box>
@@ -163,10 +166,10 @@ function Contact() {
                       flexDirection: "column",
                     }}
                   >
-                    <Typography variant='p'>27 Main Street</Typography>
+                    {/* <Typography variant='p'>27 Main Street</Typography>
                     <Typography variant='p'>Sterkspruit</Typography>
                     <Typography variant='p'>Eastern Cape</Typography>
-                    <Typography variant='p'>9762</Typography>
+                    <Typography variant='p'>9762</Typography> */}
                     <Stack
                       direction='row'
                       sx={{
@@ -176,7 +179,7 @@ function Contact() {
                       <Typography variant='h6' sx={{ fontSize: "14px" }}>
                         Tel:
                       </Typography>{" "}
-                      <Typography variant='p'> 011 883 9876</Typography>
+                      <Typography variant='p'> 082 487 0823</Typography>
                     </Stack>
                     <Stack
                       direction='row'
@@ -190,7 +193,10 @@ function Contact() {
                       >
                         Email:
                       </Typography>{" "}
-                      <Typography variant='p'> admin@</Typography>
+                      <Typography variant='p'>
+                        {" "}
+                        {" info@mlamlelifunerals.co.za"}
+                      </Typography>
                     </Stack>
                   </Box>
                 </Box>
@@ -222,7 +228,7 @@ function Contact() {
                       <Typography variant='h6' sx={{ fontSize: "14px" }}>
                         Tel:
                       </Typography>{" "}
-                      <Typography variant='p'> 011 883 9876</Typography>
+                      <Typography variant='p'> 051 023 0266</Typography>
                     </Stack>
                     <Stack
                       direction='row'
@@ -236,7 +242,10 @@ function Contact() {
                       >
                         Email:
                       </Typography>{" "}
-                      <Typography variant='p'> admin@</Typography>
+                      <Typography variant='p'>
+                        {" "}
+                        {" info@mlamlelifunerals.co.za"}
+                      </Typography>
                     </Stack>
                   </Box>
                 </Box>
@@ -270,7 +279,7 @@ function Contact() {
                       <Typography variant='h6' sx={{ fontSize: "14px" }}>
                         Tel:
                       </Typography>{" "}
-                      <Typography variant='p'> 011 883 9876</Typography>
+                      <Typography variant='p'> 051 023 0679</Typography>
                     </Stack>
                     <Stack
                       direction='row'
@@ -284,7 +293,10 @@ function Contact() {
                       >
                         Email:
                       </Typography>{" "}
-                      <Typography variant='p'> admin@</Typography>
+                      <Typography variant='p'>
+                        {" "}
+                        {" info@mlamlelifunerals.co.za"}
+                      </Typography>
                     </Stack>
                   </Box>
                 </Box>
@@ -357,7 +369,7 @@ function Contact() {
                         <Typography variant='h6' sx={{ fontSize: "14px" }}>
                           Tel:
                         </Typography>{" "}
-                        <Typography variant='p'> 011 883 9876</Typography>
+                        <Typography variant='p'> 051 023 0265</Typography>
                       </Stack>
                       <Stack
                         direction='row'
@@ -371,7 +383,10 @@ function Contact() {
                         >
                           Email:
                         </Typography>{" "}
-                        <Typography variant='p'> admin@</Typography>
+                        <Typography variant='p'>
+                          {" "}
+                          {" info@mlamlelifunerals.co.za"}
+                        </Typography>
                       </Stack>
                     </Box>
                   </Box>
@@ -403,7 +418,7 @@ function Contact() {
                         <Typography variant='h6' sx={{ fontSize: "14px" }}>
                           Tel:
                         </Typography>{" "}
-                        <Typography variant='p'> 011 883 9876</Typography>
+                        <Typography variant='p'> 076 667 0685</Typography>
                       </Stack>
                       <Stack
                         direction='row'
@@ -417,7 +432,10 @@ function Contact() {
                         >
                           Email:
                         </Typography>{" "}
-                        <Typography variant='p'> admin@</Typography>
+                        <Typography variant='p'>
+                          {" "}
+                          {" info@mlamlelifunerals.co.za"}
+                        </Typography>
                       </Stack>
                     </Box>
                   </Box>
@@ -436,10 +454,10 @@ function Contact() {
                         flexDirection: "column",
                       }}
                     >
-                      <Typography variant='p'>27 Main Street</Typography>
+                      {/* <Typography variant='p'>27 Main Street</Typography>
                       <Typography variant='p'>Sterkspruit</Typography>
                       <Typography variant='p'>Eastern Cape</Typography>
-                      <Typography variant='p'>9762</Typography>
+                      <Typography variant='p'>9762</Typography> */}
                       <Stack
                         direction='row'
                         sx={{
@@ -449,7 +467,7 @@ function Contact() {
                         <Typography variant='h6' sx={{ fontSize: "14px" }}>
                           Tel:
                         </Typography>{" "}
-                        <Typography variant='p'> 011 883 9876</Typography>
+                        <Typography variant='p'> 083 738 8804</Typography>
                       </Stack>
                       <Stack
                         direction='row'
@@ -463,132 +481,16 @@ function Contact() {
                         >
                           Email:
                         </Typography>{" "}
-                        <Typography variant='p'> admin@</Typography>
+                        <Typography variant='p'>
+                          {" "}
+                          {" info@mlamlelifunerals.co.za"}
+                        </Typography>
                       </Stack>
                     </Box>
                   </Box>
                 </Box>
               </Box>
             </Box>
-          </Stack>
-        </Box>
-        <Box
-          sx={{
-            marginTop: "15px",
-          }}
-        >
-          <Typography
-            variant='h4'
-            component='h1'
-            sx={{
-              fontSize: "17px",
-              fontWeight: 500,
-              textAlign: "center",
-              color: "#910024",
-            }}
-          >
-            Mlamleli branch office contact details
-          </Typography>
-          <Stack
-            direction={"row"}
-            sx={{
-              justifyContent: "center",
-            }}
-          >
-            <List dense={false}>
-              <ListItem
-                sx={{
-                  paddingTop: "0px",
-                  paddingBottom: "0px",
-                  fontSize: "7px",
-                }}
-              >
-                <ListItemText primary='BURGERSDORP' />
-              </ListItem>
-              <ListItem
-                sx={{
-                  paddingTop: "0px",
-                  paddingBottom: "0px",
-                  fontSize: "10px",
-                }}
-              >
-                <ListItemText primary='BETHULILE' />
-              </ListItem>
-              <ListItem
-                sx={{
-                  paddingTop: "0px",
-                  paddingBottom: "0px",
-                  fontSize: "10px",
-                }}
-              >
-                <ListItemText primary='VENTERSTAD' />
-              </ListItem>
-              <ListItem
-                sx={{
-                  paddingTop: "0px",
-                  paddingBottom: "0px",
-                  fontSize: "10px",
-                }}
-              >
-                <ListItemText primary='STERKSPRUIT' />
-              </ListItem>
-              <ListItem
-                sx={{
-                  paddingTop: "0px",
-                  paddingBottom: "0px",
-                  fontSize: "10px",
-                }}
-              >
-                <ListItemText primary='SPRINGFONTEIN' />
-              </ListItem>
-            </List>
-            <List dense={false}>
-              <ListItem
-                sx={{
-                  paddingTop: "0px",
-                  paddingBottom: "0px",
-                  fontSize: "7px",
-                }}
-              >
-                <ListItemText primary='051 023 0679' />
-              </ListItem>
-              <ListItem
-                sx={{
-                  paddingTop: "0px",
-                  paddingBottom: "0px",
-                  fontSize: "10px",
-                }}
-              >
-                <ListItemText primary='051 023 0265' />
-              </ListItem>
-              <ListItem
-                sx={{
-                  paddingTop: "0px",
-                  paddingBottom: "0px",
-                  fontSize: "10px",
-                }}
-              >
-                <ListItemText primary='051 023 0266' />
-              </ListItem>
-              <ListItem
-                sx={{
-                  paddingTop: "0px",
-                  paddingBottom: "0px",
-                  fontSize: "10px",
-                }}
-              >
-                <ListItemText primary='051 611 0013' />
-              </ListItem>
-              <ListItem
-                sx={{
-                  paddingTop: "0px",
-                  paddingBottom: "0px",
-                  fontSize: "10px",
-                }}
-              >
-                <ListItemText primary='076 667 0685' />
-              </ListItem>
-            </List>
           </Stack>
         </Box>
       </Box>

@@ -84,7 +84,7 @@ function Contact() {
                 variant='h5'
                 component='h2'
                 sx={{
-                  fontSize: "17px",
+                  fontSize: "24px",
                   fontWeight: 500,
                   textAlign: "center",
                   marginBotton: "10px",
@@ -132,9 +132,9 @@ function Contact() {
                       <Typography variant='p'> 051 611 0013</Typography>
                     </Stack>
                     <Stack
-                      direction='row'
+                      direction='column'
                       sx={{
-                        alignItems: "center",
+                        alignItems: "flex-start",
                       }}
                     >
                       <Typography
@@ -182,9 +182,9 @@ function Contact() {
                       <Typography variant='p'> 082 487 0823</Typography>
                     </Stack>
                     <Stack
-                      direction='row'
+                      direction='column'
                       sx={{
-                        alignItems: "center",
+                        alignItems: "flex-start",
                       }}
                     >
                       <Typography
@@ -231,9 +231,9 @@ function Contact() {
                       <Typography variant='p'> 051 023 0266</Typography>
                     </Stack>
                     <Stack
-                      direction='row'
+                      direction='column'
                       sx={{
-                        alignItems: "center",
+                        alignItems: "flex-start",
                       }}
                     >
                       <Typography
@@ -282,9 +282,9 @@ function Contact() {
                       <Typography variant='p'> 051 023 0679</Typography>
                     </Stack>
                     <Stack
-                      direction='row'
+                      direction='column'
                       sx={{
-                        alignItems: "center",
+                        alignItems: "flex-start",
                       }}
                     >
                       <Typography
@@ -324,7 +324,7 @@ function Contact() {
                   variant='h5'
                   component='h2'
                   sx={{
-                    fontSize: "17px",
+                    fontSize: "24px",
                     fontWeight: 500,
                     textAlign: "center",
                     marginBotton: "10px",
@@ -372,9 +372,9 @@ function Contact() {
                         <Typography variant='p'> 051 023 0265</Typography>
                       </Stack>
                       <Stack
-                        direction='row'
+                        direction='column'
                         sx={{
-                          alignItems: "center",
+                          alignItems: "flex-start",
                         }}
                       >
                         <Typography
@@ -421,9 +421,9 @@ function Contact() {
                         <Typography variant='p'> 076 667 0685</Typography>
                       </Stack>
                       <Stack
-                        direction='row'
+                        direction='column'
                         sx={{
-                          alignItems: "center",
+                          alignItems: "flex-start",
                         }}
                       >
                         <Typography
@@ -470,9 +470,9 @@ function Contact() {
                         <Typography variant='p'> 083 738 8804</Typography>
                       </Stack>
                       <Stack
-                        direction='row'
+                        direction='column'
                         sx={{
-                          alignItems: "center",
+                          alignItems: "flex-start",
                         }}
                       >
                         <Typography
